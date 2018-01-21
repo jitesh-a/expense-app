@@ -1,0 +1,17 @@
+<div *ngIf="task">
+  <h2>{{ task.name | uppercase }} Details</h2>
+  <div><span>id: </span>{{task._id}}</div>
+  <div>
+    <label>Name:
+      <input [(ngModel)]="task.name" placeholder="name" class="form-control"/>
+    </label><hr/>
+    <label>Description:
+      <textarea [(ngModel)]="task.description" class="form-control" rows="5" cols="50"></textarea>
+    </label><hr/>
+    <label>Amount:
+      <input [(ngModel)]="task.amount" placeholder="amount" class="form-control"/>
+    </label><hr/>
+  </div>
+  <button (click)="goBack()" class="btn btn-primary">go back</button>
+  <button (click)="save()">save</button>
+</div>
